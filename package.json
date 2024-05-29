@@ -1,0 +1,29 @@
+{
+  "name": "bookshelf-api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Submission dicoding Backend Pemula",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "author": "Defri Indra M",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "eslint": "^9.3.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.3.0",
+    "nodemon": "^3.1.1",
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.9",
+    "nanoid": "^5.0.7"
+  }
+}

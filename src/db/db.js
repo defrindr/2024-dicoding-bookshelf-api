@@ -12,11 +12,15 @@ const create = (book) => {
   return book
 }
 
-const fetchAll = (reading = null, finished = null) => {
+const fetchAll = (reading = null, finished = null, name = null) => {
   let displayBook = [...books]
 
   if (reading) displayBook = displayBook.filter((b) => b.reading == reading)
   if (finished) displayBook = displayBook.filter((b) => b.finished == finished)
+  if (name)
+    displayBook = displayBook.filter((b) =>
+      b.name.toLowerCase().includes(name.toLowerCase())
+    )
 
   return displayBook.map(({ id, name, publisher }) => ({
     id,

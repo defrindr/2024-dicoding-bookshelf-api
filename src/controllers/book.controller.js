@@ -2,8 +2,8 @@ import response from '../core/response.js'
 import db from '../db/db.js'
 
 const index = (r, h) => {
-  let { reading, finished } = r.query
-  let books = db.fetchAll(reading, finished)
+  let { reading, finished, name } = r.query
+  let books = db.fetchAll(reading, finished, name)
 
   return response(h).success('List buku', { books })
 }
